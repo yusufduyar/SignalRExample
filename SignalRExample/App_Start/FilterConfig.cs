@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace SignalRExampleOnCTVM
+namespace SignalRExample
 {
     public class FilterConfig
     {

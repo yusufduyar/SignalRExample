@@ -8,6 +8,10 @@
         .fail(function () { alert("ERROR") });
 
     $.connection.myHub.client.announce = function (message) {
+        writeToPage(message);
+    }
+
+    var writeToPage = function (message) {
         $("#welcome-messages").append(message + "<br/>")
     }
 })()

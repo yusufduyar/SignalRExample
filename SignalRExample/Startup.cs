@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(SignalRExampleOnCTVM.Startup))]
+[assembly: OwinStartup(typeof(SignalRExample.Startup))]
 
-namespace SignalRExampleOnCTVM
+namespace SignalRExample
 {
     public class Startup
     {
