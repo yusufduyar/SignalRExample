@@ -1,13 +1,14 @@
 ﻿//Immediately Invoked Function Expression
 (function () {
+    var myHub = $.connection.myHub;
     $.connection.hub.start()
         .done(function () {
-            console.log("IT WORKED!");
-            $.connection.myHub.server.announce("Connected!");
+            writeToPage("It worked!");
+            myHub.server.announce("Connected!");
         })
-        .fail(function () { alert("ERROR") });
+        .fail(function () { writeToPage("Error connnecting to SignalR"); });
 
-    $.connection.myHub.client.announce = function (message) {
+    myHub.client.announce = function (message) {
         writeToPage(message);
     }
 
